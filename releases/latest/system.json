@@ -1,0 +1,69 @@
+{
+  "description": "Anyventure D12 system for FoundryVTT",
+  "esmodules": [
+    "modules/avd12-main.js"
+  ],
+  "gridDistance": 1,
+  "gridUnits": "u",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "authors": [
+    {
+      "name": "Lachlan R McCallum",
+      "flags": {}
+    }
+  ],
+  "license": "LICENSE.txt",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10",
+    "maximum": "10"
+  },
+  "id": "avd12",
+  "primaryTokenAttribute": "secondary.health",
+  "secondaryTokenAttribute": "secondary.delirium",
+  "socket": true,
+  "styles": [
+    "styles/simple.css"
+  ],
+  "packs": [
+    {
+      "type": "Item",
+      "label": "Armors",
+      "name": "armors",
+      "path": "packs/armors.db",
+      "system": "avd12",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "type": "Item",
+      "label": "Spells",
+      "name": "spells",
+      "path": "packs/spells.db",
+      "system": "avd12",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "type": "Item",
+      "label": "Weapons",
+      "name": "weapons",
+      "path": "packs/weapons.db",
+      "system": "avd12",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "title": "AnyVenture D12 RPG",
+  "version": "10.0.25",
+  "url": "https://github.com/LachlanMac/avd12/",
+  "manifest": "https://github.com/LachlanMac/avd12/blob/main/system.json",
+  "background": "systems/fvtt-avd12/images/ui/avd12_welcome_page.webp"
+}
