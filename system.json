@@ -20,7 +20,6 @@
     }
   ],
   "license": "LICENSE.txt",
-  "manifest": "https://github.com/LachlanMac/avd12/system.json",
   "compatibility": {
     "minimum": "10",
     "verified": "10",
@@ -63,8 +62,9 @@
     }
   ],
   "title": "AnyVenture D12 RPG",
-  "url": "https://github.com/LachlanMac/avd12",
   "version": "10.0.25",
+  "url": "https://github.com/LachlanMac/avd12/",
+  "manifest": "https://github.com/LachlanMac/avd12/system.json",
   "download": "https://github.com/LachlanMac/avd12/archive/fvtt-avd12-v10.0.25.zip",
   "background": "systems/fvtt-avd12/images/ui/avd12_welcome_page.webp"
 }
