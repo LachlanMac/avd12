@@ -1,0 +1,88 @@
+<form class="skill-roll-dialog">
+  <header class="roll-dialog-header">
+    {{#if img}}
+    <img class="actor-icon" src="{{img}}" data-edit="img" title="{{name}}" />
+    {{/if}}
+    <h1 class="dialog-roll-title roll-dialog-header">{{title}}</h1>
+  </header>
+
+    <div class="flexcol">
+      
+      {{#if skill}}
+      <div class="flexrow">
+        <span class="roll-dialog-label">Skill : </span>
+        <span class="roll-dialog-label">{{skill.name}} ({{skill.finalvalue}})</span>
+      </div>
+      {{/if}}
+
+      {{#if crafting}}
+      <div class="flexrow">
+        <span class="roll-dialog-label">Crafting : </span>
+        <span class="roll-dialog-label">{{crafting.name}} ({{crafting.system.level}})</span>
+      </div>
+      {{/if}}
+
+      {{#if weapon}}
+      <div class="flexrow">
+        <span class="roll-dialog-label">Weapon Attack Bonus : </span>
+        <span class="roll-dialog-label">{{weapon.attackBonus}}</span>
+      </div>
+      {{/if}}
+
+      {{#if spell}}
+      <div class="flexrow">
+        <span class="roll-dialog-label">Spell : </span>
+        <span class="roll-dialog-label">{{spell.name}} ({{upperFirst spell.system.level}} - Cost : {{spellCost}})</span>
+      </div>
+      <div class="flexrow">
+        <span class="roll-dialog-label">Spell Attack level : </span>
+        <span class="roll-dialog-label">{{spellAttack}}</span>
+      </div>
+      <div class="flexrow">
+        <span class="roll-dialog-label">Spell Damage level : </span>
+        <span class="roll-dialog-label">{{spellDamage}}</span>
+      </div>
+      {{/if}}
+
+      <div class="flexrow">
+        <span class="roll-dialog-label">Bonus/Malus : </span>
+        <select id="bonusMalusRoll" name="bonusMalusRoll">
+          {{#select bonusMalusRoll}} 
+            <option value="-4">-4</option>
+            <option value="-3">-3</option>
+            <option value="-2">-2</option>
+            <option value="-1">-1</option>
+            <option value="0">0</option>
+            <option value="1">+1</option>
+            <option value="2">+2</option>
+            <option value="3">+3</option>
+            <option value="4">+4</option>
+          {{/select}}
+        </select>        
+      </div>
+
+      {{#if (eq skillKey "initiative") }}
+
+      {{else}}
+        {{#if (or spell weapon)}} 
+
+        {{else}}
+        <div class="flexrow">
+          <span class="roll-dialog-label">Target check : </span>
+          <select id="targetCheck" name="targetCheck">
+            {{#select targetCheck}} 
+              <option value="none">None</option>
+              <option value="5">5 (Trivial)</option>
+              <option value="7">7 (Easy)</option>
+              <option value="10">10 (Regular)</option>
+              <option value="14">14 (Difficult)</option>
+              <option value="20">20 (Heroic)</option>
+            {{/select}}
+          </select>        
+        </div>
+        {{/if}}
+      {{/if}}
+
+  </div>
+
+</form>
