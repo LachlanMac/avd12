@@ -64,7 +64,7 @@
   "title": "AnyVenture D12 RPG",
   "version": "10.0.25",
   "url": "https://github.com/LachlanMac/avd12/",
-  "manifest": "https://github.com/LachlanMac/avd12/blob/main/releases/latest/system.json",
-  "download":"https://github.com/LachlanMac/avd12/blob/main/downloads/avd12.zip",
+  "manifest": "https://github.com/LachlanMac/avd12/raw/main/releases/latest/system.json",
+  "download":"https://github.com/LachlanMac/avd12/raw/main/downloads/avd12.zip",
   "background": "systems/fvtt-avd12/images/ui/avd12_welcome_page.webp"
 }
